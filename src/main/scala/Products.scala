@@ -1,6 +1,6 @@
 object Products {
-  val prices: Map[String, Double] = Map(
-    "Apple" -> 0.60,
-    "Orange" -> 0.25
+  val prices: Map[String, BigDecimal] = Map(
+    "Apple" -> BigDecimal(0.60),
+    "Orange" -> BigDecimal(0.25)
   )
 }

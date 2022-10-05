@@ -6,11 +6,22 @@ class ShoppingCartSpec extends AnyFunSuite {
     val shoppingCart =
       ShoppingCart()
         .add("Apple")
+        .add("Orange")
+        
+    assert(shoppingCart.totalPrice === 0.85)
+  }
+
+  test("calculates the correct price for a shopping cart taking into account offers") {
+    val shoppingCart =
+      ShoppingCart()
+        .add("Apple")
         .add("Apple")
         .add("Orange")
         .add("Apple")
-        
-    assert(shoppingCart.totalPrice === 2.05)
+        .add("Orange")
+        .add("Orange")
+
+    assert(shoppingCart.totalPrice === 1.70)
   }
 
 }
